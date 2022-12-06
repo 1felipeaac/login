@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    /* padding: 0; */
+}
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+body{
+    background-color: var(--background);
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+}
+
+input, button{
+    font-family: "Roboto", sans-serif;
+}
+
+#id-fieldset{
+    background-color: var(--form-background);
+    display: flex;
+    color: var(--text-base);
+    box-sizing: border-box;
+    width: 300px;
+    border: none;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+
+}
+
+#id-head{
+    padding-bottom: 20px;
+}
+
+#id-form{
+    padding: 50px 50px;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 20px;
+}
+
+#id-email, #id-password{
+    background-color: var(--form-background);
+    border: 2px solid var(--text-base);
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+span{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 0.3rem;
+}
+
+#id-remember, #id-register{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#id-button{
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border: none;
+    width: fit-content;
+    height: 30px;
+}
+
+@media (min-width: 412px) {
+    #id-fieldset {
+      max-width: 700px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-left: 0px;
+    }
+  }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login FORM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <fieldset id="id-fieldset">
+        
+        <form id="id-form" action="">
+            <div id="id-head">
+                <h1>Faça seu Login</h1>
+                <p>Entre com suas informações de cadastro.</p>
+            </div>
+
+            <legend>E-mail</legend>
+            <input id="id-email"
+            type="email" 
+            name="" 
+            id=""
+            placeholder="Digite seu e-mail"
+            required
+            multiple
+            minlength="8"
+            size="70"
+            pattern=".+@rocketseat\.com\.br"
+            title="Somente e-mails Rocketseat serão aceitos"
+            >
+            <legend>Senha</legend>
+            <input id="id-password"
+            type="password" 
+            minlength="4" 
+            maxlength="8"
+            pattern="[0-9a-fA]{4,8}"
+            title="Coloque HEX no mínimo 4 caracteres e no máximo 8 caracteres"
+            placeholder="Digite sua senha"
+            required
+            inputmode="numeric"
+            ><br>
+            <div id="id-remember">
+                <span><input type="checkbox" name="" id="id-check">Lembre-me</span>
+                <a href="#">Esqueci minha senha</a>
+            </div>
+            <button id="id-button" type="submit">ENTRAR</button>
+            <div id="id-register">
+                <p>Não tem uma conta?</p><a href="#">Registre-se</a>
+            </div>
+        </form>
+    </fieldset>
+</body>
+</html>
