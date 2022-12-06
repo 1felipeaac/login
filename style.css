@@ -24,6 +24,7 @@ input, button{
 
 header{
     margin-bottom: 40px;
+    margin-left: 10px;
 }
 nav{
     display: flex;
@@ -35,8 +36,13 @@ img{
     height: 30px;
 }
 
+h1{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
 #id-fieldset{
-    background-color: var(--form-background);
     display: flex;
     color: var(--text-base);
     box-sizing: border-box;
@@ -74,7 +80,17 @@ img{
     margin-bottom: 10px;
 }
 
-span{
+#id-email{
+    padding-left: 25px;
+    background: url("./images/mail.svg") no-repeat left;
+}
+
+#id-password{
+    padding-left: 25px;
+    background: url("./images/lock.svg") no-repeat left;
+}
+
+label{
     display: flex;
     align-items: center;
     align-content: center;
@@ -104,13 +120,49 @@ a{
     height: 30px;
 }
 
+input[type="checkbox"]{
+    appearance: none;
+    --input-color: var(--text-title);
+    border: 1px solid var(--text-base);
+    width: 1rem;
+    height: 1rem;
+    display: grid;
+    place-content: center;    
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--primary-color);   
+}
+
+
+input[type="email"], input[type="password"]:focus-within{
+    border: 1px solid var(--primary-color);
+}
+
+#id-email:focus{
+    padding-left: 25px;
+    background: url("./images/mail-focus.svg") no-repeat left;
+    color: var(--text-base);
+}
+
+#id-password:focus{
+    padding-left: 25px;
+    background: url("./images/lock-focus.svg") no-repeat left;
+    color: var(--text-base);
+}
+
 @media (min-width: 420px) {
     #id-fieldset {
-      max-width: 540px;
+      max-width: 500px;
       flex-direction: row;
       flex-wrap: wrap;
+      background-color: var(--form-background);
     }
     body{
         margin-left: 50px;
+        background-image: url("./images/side-image-2x.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 50%;
     }
   }
