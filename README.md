@@ -18,7 +18,7 @@ Tela de Login Responsiva
 <br>
 
 <p align="center">
-  <img alt="preview project" src=".github/preview.jpg" width="100%">
+  <img alt="preview project" src="./.github/preview.svg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
