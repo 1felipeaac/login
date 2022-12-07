@@ -37,9 +37,11 @@ img{
 }
 
 h1{
+    margin-top: 40px;
     display: flex;
     align-items: center;
     gap: .5rem;
+    color: var(--text-title);
 }
 
 #id-fieldset{
@@ -83,11 +85,30 @@ h1{
 #id-email{
     padding-left: 25px;
     background: url("./images/mail.svg") no-repeat left;
+    color: var(--text-base);
+}
+
+#div-password{
+    display: flex;
+    justify-content: space-between;
 }
 
 #id-password{
+    flex: 1;
     padding-left: 25px;
     background: url("./images/lock.svg") no-repeat left;
+    border-right: none;
+    color: var(--text-base);
+}
+
+#hide-password{
+    height: 35.97px;
+    width: 30px;
+    background: url("./images/eye.svg") no-repeat;
+    background-position: center;
+    border: 2px solid var(--text-base);
+    border-left: none;
+
 }
 
 label{
@@ -100,13 +121,13 @@ label{
 #id-remember{
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 #id-register{
     display: flex;
     justify-content: center;
     color:  var(--primary-color);
+    margin-bottom: 40px;
 }
 
 a{
@@ -118,6 +139,8 @@ a{
     border: 2px solid var(--primary-color);
     border: none;
     height: 30px;
+    font-weight: bold;
+    color:  var(--form-background);
 }
 
 input[type="checkbox"]{
@@ -134,22 +157,90 @@ input[type="checkbox"]:checked{
     background-color: var(--primary-color);   
 }
 
-
-input[type="email"], input[type="password"]:focus-within{
-    border: 1px solid var(--primary-color);
+#id-email, #id-password{
+    color: var(--text-base);
 }
 
-#id-email:focus{
+#id-email:focus-within{
     padding-left: 25px;
     background: url("./images/mail-focus.svg") no-repeat left;
-    color: var(--text-base);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--primary-color);
+    border-radius: 5px;
 }
 
-#id-password:focus{
+#id-password:focus-within{
     padding-left: 25px;
     background: url("./images/lock-focus.svg") no-repeat left;
-    color: var(--text-base);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--primary-color);
+    border-radius: 5px;
+
 }
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--form-background);
+    border: 1px solid var(--text-base);
+    border-radius: 5px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: var(--text-base);
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 4px;
+    width: 2px;
+    height: 7px;
+    border: solid var(--background);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 
 @media (min-width: 420px) {
     #id-fieldset {

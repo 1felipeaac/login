@@ -33,18 +33,24 @@
             title="Somente e-mails Rocketseat serão aceitos"
             >
             <legend>Senha</legend>
-            <input id="id-password"
-            type="password" 
-            minlength="4" 
-            maxlength="8"
-            pattern="[0-9a-fA]{4,8}"
-            title="Coloque HEX no mínimo 4 caracteres e no máximo 8 caracteres"
-            placeholder="Digite sua senha"
-            required
-            inputmode="numeric"
-            ><br>
+            <div id="div-password">
+                <input id="id-password"
+                type="password" 
+                minlength="4" 
+                maxlength="8"
+                pattern="[0-9a-fA]{4,8}"
+                title="Coloque HEX no mínimo 4 caracteres e no máximo 8 caracteres"
+                placeholder="Digite sua senha"
+                required
+                inputmode="full-width-latin"
+                >
+                <button id="hide-password" onclick="showPassword()"></button>
+            </div>
             <div id="id-remember">
-                <label class="checked"><input type="checkbox" name="" id="id-check">Lembre-me</label>
+                <label class="container">
+                    <input type="checkbox" name="" id="id-check">Lembre-me
+                    <span class="checkmark"></span>
+                </label>
                 <a href="#">Esqueci minha senha</a>
             </div>
             <button id="id-button" type="submit">ENTRAR</button>
@@ -53,5 +59,15 @@
             </div>
         </form>
     </fieldset>
+    <script>
+        function showPassword() {
+          var value = document.getElementById("id-password");
+          if (value.type === "password") {
+            value.type = "text";
+          } else {
+            value.type = "password";
+          }
+        }
+        </script>
 </body>
 </html>
